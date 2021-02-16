@@ -1,0 +1,88 @@
+PRINCIPAL{
+	INIVAR
+
+		ARRAY2D[2,5] ENTERO arr4=[{1,2,3,4,5}{6,7,8,9,10}], arr42=[{1,2,3,4,5}{6,7,8,9,10}];
+
+		ARRAY1D[1] ENTERO arr5={1}, arr52;
+
+		ARRAY1D[3] ENTERO arr6={1,25,3}, arr8={2,0,7}, arr9={1,1,1}, arrRes;
+
+		ARRAY2D[2,4] ENTERO arr7=[{1,2,3,4}{6,7,8,9}];
+
+		ARRAY1D[3] REAL arr10={2.0,3.0,4.0}, arr11={5.5,7.9,8.1}, arrRes2;
+
+		ARRAY1D[4] REAL arr12={2.0,-3.0,4.0,5.0}, arr13={5.5,7.9,8.1, 7.3}, arrRes3;
+
+		ENTERO i=0;
+
+	FINVAR
+
+	IMPRIMIR "{", arr6[0];
+	i=1;
+	MIENTRAS (i < 3){
+		IMPRIMIR  ", ",arr6[i];
+		i=i+1;
+	}
+	IMPRIMIR "}\n";
+
+	arrRes=arr6+arr9;
+
+	IMPRIMIR "{", arrRes[0];
+	i=1;
+	MIENTRAS (i < 3){
+		IMPRIMIR  ", ",arrRes[i];
+		i=i+1;
+	}
+	IMPRIMIR "}\n";
+
+	arrRes2=arr10-arr11;
+
+	IMPRIMIR "{", arrRes2[0];
+	i=1;
+	MIENTRAS (i < 3){
+		IMPRIMIR  ", ",arrRes2[i];
+		i=i+1;
+	}
+	IMPRIMIR "}\n";
+
+	arrRes3=arr12/arr13;
+
+	IMPRIMIR "{", arrRes3[0];
+	i=1;
+	MIENTRAS (i < 4){
+		IMPRIMIR  ", ",arrRes3[i];
+		i=i+1;
+	}
+	IMPRIMIR "}\n";
+
+	arrRes3=arr12*arr13;
+
+	IMPRIMIR "{", arrRes3[0];
+	i=1;
+	MIENTRAS (i < 4){
+		IMPRIMIR  ", ",arrRes3[i];
+		i=i+1;
+	}
+	IMPRIMIR "}\n";
+
+	arrRes=arr9**3;
+
+	IMPRIMIR "{", arrRes[0];
+	i=1;
+	MIENTRAS (i < 3){
+		IMPRIMIR  ", ",arrRes[i];
+		i=i+1;
+	}
+	IMPRIMIR "}\n";
+
+	arrRes3=4.0**arr13;
+
+	IMPRIMIR "{", arrRes3[0];
+	i=1;
+	MIENTRAS (i < 4){
+		IMPRIMIR  ", ",arrRes3[i];
+		i=i+1;
+	}
+	IMPRIMIR "}\n";
+
+}

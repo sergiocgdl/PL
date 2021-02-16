@@ -1,0 +1,85 @@
+PRINCIPAL{
+	INIVAR
+
+		ARRAY2D[2,5] ENTERO arr4=[{1,2,3,4,5}{6,7,8,9,10}], arr42=[{1,2,3,4,5}{6,7,8,9,10}];
+
+		ARRAY2D[5,4] ENTERO arr7=[{1,2,3,4}{6,7,8,9}{1,1,1,1}{3,4,6,9}{2,3,4,4}];
+
+		ARRAY2D[3,3] REAL arr8=[{1.3, 5.1, 4.2}{2.3, 4.3, 5.6}{1.0, -4.5, -8.9}];
+
+		ARRAY2D[5,4] ENTERO arrRes;
+
+		ARRAY2D[2,4] ENTERO arrRes2;
+
+		ENTERO i=0, j=0;
+
+	FINVAR
+
+	arrRes=arr7**3;
+
+	i=0;
+	MIENTRAS (i < 5){
+		j=0;
+		MIENTRAS (j<4){
+			IMPRIMIR  " ",arrRes[i,j];
+			j=j+1;
+		}
+		IMPRIMIR "\n";
+		i=i+1;
+	}
+
+	IMPRIMIR "\n\n";
+	arrRes2=arr4**arr7;
+	i=0;
+	MIENTRAS (i < 2){
+		j=0;
+		MIENTRAS (j<4){
+			IMPRIMIR  " ",arrRes2[i,j];
+			j=j+1;
+		}
+		IMPRIMIR "\n";
+		i=i+1;
+	}
+
+	arr8=arr8**arr8;
+	i=0;
+	IMPRIMIR "\n\n";
+	MIENTRAS (i < 3){
+		j=0;
+		MIENTRAS (j<3){
+			IMPRIMIR  " ",arr8[i,j];
+			j=j+1;
+		}
+		IMPRIMIR "\n";
+		i=i+1;
+	}
+
+	arr8=arr8*arr8;
+	i=0;
+	IMPRIMIR "\n\n";
+	MIENTRAS (i < 3){
+		j=0;
+		MIENTRAS (j<3){
+			IMPRIMIR  " ",arr8[i,j];
+			j=j+1;
+		}
+		IMPRIMIR "\n";
+		i=i+1;
+	}
+
+	arr8=arr8-arr8;
+	i=0;
+	IMPRIMIR "\n\n";
+	MIENTRAS (i < 3){
+		j=0;
+		MIENTRAS (j<3){
+			IMPRIMIR  " ",arr8[i,j];
+			j=j+1;
+		}
+		IMPRIMIR "\n";
+		i=i+1;
+	}
+
+
+
+}

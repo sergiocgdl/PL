@@ -1,0 +1,105 @@
+PRINCIPAL{
+	INIVAR
+
+		ENTERO a, b, solent, aa;
+
+		REAL r, s, solre;
+
+		CARACTER c='c';		
+
+	FINVAR
+
+	ENTERO sumar_entero (ENTERO ent1, ENTERO ent2) {
+
+		INIVAR
+
+			ENTERO sol;
+
+		FINVAR
+
+		sol=ent1+ent2;
+
+		DEVOLVER sol;
+	}
+
+	REAL multiplica_reales (REAL r1, REAL r2) {
+
+		INIVAR
+
+			REAL sol;
+
+		FINVAR
+
+		sol=r1+r2;
+
+		DEVOLVER sol;
+	}
+
+	IMPRIMIR "\nintroduce numero entero: ";
+	LEER a;
+	IMPRIMIR "\nintroduce otro numero entero: ";
+	LEER b;
+
+	solent=sumar_entero(a,b);
+
+	IMPRIMIR "Suma: ", solent, "\n";
+
+	IMPRIMIR "\nintroduce numero real: ";
+	LEER r;
+	IMPRIMIR "\nintroduce otro numero real: ";
+	LEER s;
+
+	solre=multiplica_reales(r,s);
+
+	IMPRIMIR "Multiplicacion: ", solent, "\n";
+	
+	SI(solre>10.0 && solent >10){
+
+		IMPRIMIR "\nAmbos mayores que 10.";
+
+	}SINO{
+
+		IMPRIMIR "\nHay uno menor que 10.";
+	}
+
+	IMPRIMIR "\nDividiendo por 2 el producto mientras sea mayor que 10.0\n solre: ";
+
+	MIENTRAS (solre > 10.0){
+		solre=solre/2.0;
+		IMPRIMIR solre, ", ";
+	}
+
+	IMPRIMIR "\nsolre final: ", solre;
+
+	IMPRIMIR "\nintroduce numero entero entre 1 y 3: ";
+	LEER aa;
+
+	SEGUN aa CASO 1:
+
+		IMPRIMIR "\nEs uno";
+
+		FINCASO;
+
+	CASO 2:
+
+		IMPRIMIR "\nEs dos";
+
+		FINCASO;
+
+	CASO 3:
+
+		IMPRIMIR "\nEs tres";
+
+		FINCASO;
+
+	PORDEFECTO:
+
+		IMPRIMIR "\nNo esta entre uno y tres";
+
+		FINCASO;
+
+	solent=aa*b+(a*b)/aa;
+
+	IMPRIMIR "\nExpresion compleja: ", solent;
+ 
+}
